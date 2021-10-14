@@ -1676,19 +1676,10 @@ Ket : Ketik /resetgame , Untuk Mereset Permainan Yg Ada Di Grup!`, text, {contex
               gopeynya = 'https://telegra.ph/file/5300c74e3b843b9c0d29d.jpg'
               teksnya = `*── 「 PRICE LIST 」 ──*
 
-*Tarif Premium User adalah 10K Perbulan*
-*Keuntungan Premium Diantaranya:*
-♲ *Bebas memakai fitur premium*
-♲ *Dapat Informasi Lebih dulu akan Update, Nomor Bot Baru (Jika Terbanned), dan Lainnya*
+*SHERLYNN SEWA BOT WA*
+FITUR:ANTILINK,WELCOME,ADD,KICK,DEMOTE,DAN MASIH BANYAK LAGI
 
-*Jika Tertarik,Kalian Bisa Bayar Melalui Metode Pembayaran di Bawah:*
-*Dana : 081220670449*
-*Gopay : scan diatas*
-*Atau Gopay pada gambar diatas*
-
-*Info Lebih Lengkap Chat Owner, Ketik ${prefix}owner*
-*_note_*:
-*Pembelian Premium yang disertai SewaBot hanya akan membayar 20K (Diskon 5K)*`
+HARGA PERMANEN:~25k~ PROMO!!! *10K* MINAT? HUBUNGI OWNER`
               dha.sendMessage(from, await getBuffer(gopeynya), image, {quoted: mek, caption: teksnya })
               break             
 //------------------< bayar menu >-------------------  
