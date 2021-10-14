@@ -983,9 +983,7 @@ Makernya banyak tu kalian masukan aja namanya sendiri
 *き⃟🦈 ${prefix}asupan*
 
 𝖯𝖤𝖭𝖣𝖨𝖣𝖨𝖪𝖠𝖭 𝖬𝖤𝖭𝖴 
-*き⃟🦈 ${prefix}nulis*
-*き⃟🦈 ${prefix}wiki*
-*き⃟🦈 ${prefix}brainly*
+*き⃟🦈 ${prefix}nulis
 
 𝖲𝖳𝖠𝖫𝖪𝖨𝖭𝖦 𝖬𝖤𝖭𝖴 
 *き⃟🦈 ${prefix}igstalk*
@@ -1744,9 +1742,7 @@ case 'buttonstik':
 case 'buttonpen':
               gopeynya = 'https://telegra.ph/file/5300c74e3b843b9c0d29d.jpg'
               teksnya = `*「NULIS MENU」*
-*き⃟🦈 ${prefix}nulis*
-*き⃟🦈 ${prefix}wiki*
-*き⃟🦈 ${prefix}brainly*`
+*き⃟🦈 ${prefix}nulis*`
               dha.sendMessage(from, await getBuffer(gopeynya), image, {quoted: ftoko, caption: teksnya })
               break
 case 'buttongame':
