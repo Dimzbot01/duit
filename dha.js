@@ -3769,6 +3769,7 @@ case 'linkgc':
 				break
             case 'kick':
              reply('asek dapat jatah ngekick wkwkwwk oke lah lansung aja *TENDANGAN GARUDA*')
+             if (!isGroupAdmins) return reply(mess.only.admin)
              if (!isGroup) return reply(mess.only.group)
              kick(from, mentionUser)
              break
@@ -3899,11 +3900,13 @@ case 'linkgc':
               mentions(txti, arr, true)
               break
        case 'kickall': // Anti Banned
+              if (!isGroupAdmins) return reply(mess.only.admin)
               for (let i of groupMembers) {
               await kickMember(from, [i.jid])
 }
               break
        case 'leave':
+              if (!isGroupAdmins) return reply(mess.only.admin)
               if (!isGroup) return reply(mess.only.group)
               setTimeout( () => {
               dha.groupLeave(from) 
@@ -4469,6 +4472,7 @@ case 'coffe':
 }
               break
        case 'antilink':
+              if (!isGroupAdmins) return reply(mess.only.admin)
               if (!isGroup) return reply(mess.only.group)
               if (!isBotGroupAdmins) return reply(`Bot Harus jadi Admin`)
               if (!q) return reply(`Pilih enable atau disable`)
@@ -4487,6 +4491,7 @@ case 'coffe':
 }
               break
        case 'welcome':
+               if (!isGroupAdmins) return reply(mess.only.admin)
                if (!isGroup) return reply(mess.only.group)
                if (args.length < 1) return reply('!welcome enable/disable')
                if ((args[0]) === 'enable') {
