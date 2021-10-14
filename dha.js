@@ -3767,7 +3767,6 @@ case 'linkgc':
 				dha.sendMessage(from, yeh, text, {quoted: mek})
 				break
             case 'kick':
-             reply('asek dapat jatah ngekick wkwkwwk oke lah lansung aja *TENDANGAN GARUDA*')
              if (!isGroupAdmins) return reply(mess.only.admin)
              if (!isGroup) return reply(mess.only.group)
              kick(from, mentionUser)
