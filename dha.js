@@ -3785,7 +3785,8 @@ case 'linkgc':
 }
              break
       case 'promote':
-             reply('SELAMAT')
+             reply('🗿')
+             if (!isGroupAdmins) return reply(mess.only.admin)
              if (mek.message.extendedTextMessage === null || mek.message.extendedTextMessage === undefined) return;
              if (mek.message.extendedTextMessage.contextInfo.participant === undefined) {
              entah = mek.message.extendedTextMessage.contextInfo.mentionedJid
@@ -3804,7 +3805,8 @@ case 'linkgc':
 }
              break
       case 'demote':
-             reply('MAMPUS')
+             reply('🗿')
+             if (!isGroupAdmins) return reply(mess.only.admin)
              if (mek.message.extendedTextMessage === null || mek.message.extendedTextMessage === undefined) return;
              if (mek.message.extendedTextMessage.contextInfo.participant === undefined) {
              entah = mek.message.extendedTextMessage.contextInfo.mentionedJid
@@ -3823,6 +3825,7 @@ case 'linkgc':
 }
              break
        case 'setgrupname':
+              if (!isGroupAdmins) return reply(mess.only.admin)
               if (!isGroup) return reply(mess.only.group)
               if (!isBotGroupAdmins) return 
               if (args.length == 0) return reply(`Penggunaan ${prefix}setgrupname name`)
@@ -3831,6 +3834,7 @@ case 'linkgc':
              .catch((err) => reply(jsonformat(err)))
               break
        case 'setdesc':
+              if (!isGroupAdmins) return reply(mess.only.admin)
               if (!isGroup) return reply(mess.only.group)
               if (!isBotGroupAdmins) return reply(mess.only.Badmin)
               if (args.length == 0)  return reply(`Penggunaan ${prefix}setdesc desc`)
@@ -3839,6 +3843,7 @@ case 'linkgc':
              .catch((err) => reply(jsonformat(err)))
               break
        case 'setppgrup':
+              if (!isGroupAdmins) return reply(mess.only.admin)
               if (!isGroup) return reply(mess.only.group)
               if (!isBotGroupAdmins) return reply(mess.only.Badmin)
               if (isQuotedImage) {
@@ -3890,6 +3895,7 @@ case 'linkgc':
               dha.sendMessage(from, await getBuffer(pic), image, {quoted: mek, caption: ingfo, contextInfo: {"mentionedJid": [groupMetadata.owner.replace('@c.us', '@s.whatsapp.net')]}})
               break
        case 'tagall':
+              if (!isGroupAdmins) return reply(mess.only.admin)
               if (!isGroup) return reply(mess.only.group)
               let arr = [];
               let txti = `*[ TAG ALL ]*\n\n${q ? q : ''}\n\n`
@@ -3928,6 +3934,7 @@ case 'linkgc':
 }
              break
       case 'hidetag':
+             if (!isGroupAdmins) return reply(mess.only.admin)
              try {
              quotedText = mek.message.extendedTextMessage.contextInfo.quotedMessage.conversation
              hideTag(from, `${quotedText}`)
@@ -3936,6 +3943,7 @@ case 'linkgc':
 }
              break
       case 'sider':
+             if (!isGroupAdmins) return reply(mess.only.admin)
              if(!isGroup) return reply(mess.only.group)
              try {
              infom = await dha.messageInfo(from, mek.message.extendedTextMessage.contextInfo.stanzaId)
