@@ -2682,7 +2682,6 @@ a += `\`\`\`き⃟🦈 Title : ${i.title}\`\`\`
                break
          case 'asupan': // shansekai                
                if (!isPremium) return reply(mess.only.premium)
-               if (!isOwner) return  reply(mess.only.owner)
                reply(mess.wait)
                asupan()
               .then(async (body) => {
